@@ -1,9 +1,13 @@
+//Not the production code.
+
+import { santinize } from "./security";
+
 function postQuestion(name,info,email) {
     const req=new XMLHttpRequest();
     const content=JSON.stringify({
-        "name":name,
-        "info":info,
-        "email":email
+        "name":santinize(name),
+        "info":santinize(info),
+        "email":santinize(email),
     });
     req.open("POST","/questions/new",true);
     req.setRequestHeader("content-type","application/json");
@@ -23,12 +27,13 @@ function postQuestion(name,info,email) {
     });
     req.send(content);
 }
-function postPaper(name,info,email){
+function postPaper(name,info,email,color){
     const req=new XMLHttpRequest();
     const content=JSON.stringify({
-        "name":name,
-        "info":info,
-        "email":email
+        "name":santinize(name),
+        "info":santinize(info),
+        "email":santinize(email),
+        "color":color,
     });
     req.open("POST","/paper/post",true);
     req.setRequestHeader("content-type","application/json");

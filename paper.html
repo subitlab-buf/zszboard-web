@@ -167,6 +167,51 @@
 </head>
 
 <body>
+    <!-- Chest starts -->
+    <div style="position:fixed;right:10%;bottom:10%;" class="chest">
+        <div class="chest__panel chest__panel--back"></div>
+        <div class="chest__panel chest__panel--front">
+            <div class="chest__panel chest__panel--front-frame"></div>
+        </div>
+        <div class="chest__panel chest__panel--top"></div>
+        <div class="chest__panel chest__panel--bottom"></div>
+        <div class="chest__panel chest__panel--left"></div>
+        <div class="chest__panel chest__panel--right"></div>
+        <div class="chest-drawer chest-drawer--top">
+            <details id="top">
+                <summary></summary>
+            </details>
+            <div class="chest-drawer__structure">
+                <div class="chest-drawer__panel chest-drawer__panel--left"></div>
+                <div class="chest-drawer__panel chest-drawer__panel--right"></div>
+                <div class="chest-drawer__panel chest-drawer__panel--bottom"></div>
+                <div class="chest-drawer__panel chest-drawer__panel--back"><b>SubIT</b></div>
+            </div>
+        </div>
+        <div class="chest-drawer chest-drawer--middle">
+            <details id="middle">
+                <summary></summary>
+            </details>
+            <div class="chest-drawer__structure">
+                <div class="chest-drawer__panel chest-drawer__panel--left"></div>
+                <div class="chest-drawer__panel chest-drawer__panel--right"></div>
+                <div class="chest-drawer__panel chest-drawer__panel--bottom"></div>
+                <div class="chest-drawer__panel chest-drawer__panel--back"><b>Inbox</b></div>
+            </div>
+        </div>
+        <div class="chest-drawer chest-drawer--bottom">
+            <details id="bottom">
+                <summary></summary>
+            </details>
+            <div class="chest-drawer__structure">
+                <div class="chest-drawer__panel chest-drawer__panel--left"></div>
+                <div class="chest-drawer__panel chest-drawer__panel--right"></div>
+                <div class="chest-drawer__panel chest-drawer__panel--bottom"></div>
+                <div class="chest-drawer__panel chest-drawer__panel--back"><b>Outbox</b></div>
+            </div>
+        </div>
+    </div>
+    <!-- Chest ends -->
     <div class="container" id="container">
         <div class="main sticky tape" style="background-color:var(--yellow);" id="main">
             <br>
@@ -214,51 +259,6 @@
         点击按钮可以抽一张来自其他人的小纸条
         <a class="random btn-gradient large yellow" onclick="random()">抽一张</a>
     </div>
-    <!-- Chest starts -->
-    <div style="position:fixed;right:10%;bottom:10%;" class="chest">
-        <div class="chest__panel chest__panel--back"></div>
-        <div class="chest__panel chest__panel--front">
-            <div class="chest__panel chest__panel--front-frame"></div>
-        </div>
-        <div class="chest__panel chest__panel--top"></div>
-        <div class="chest__panel chest__panel--bottom"></div>
-        <div class="chest__panel chest__panel--left"></div>
-        <div class="chest__panel chest__panel--right"></div>
-        <div class="chest-drawer chest-drawer--top">
-            <details id="top">
-                <summary></summary>
-            </details>
-            <div class="chest-drawer__structure">
-                <div class="chest-drawer__panel chest-drawer__panel--left"></div>
-                <div class="chest-drawer__panel chest-drawer__panel--right"></div>
-                <div class="chest-drawer__panel chest-drawer__panel--bottom"></div>
-                <div class="chest-drawer__panel chest-drawer__panel--back"><b>SubIT</b></div>
-            </div>
-        </div>
-        <div class="chest-drawer chest-drawer--middle">
-            <details id="middle">
-                <summary></summary>
-            </details>
-            <div class="chest-drawer__structure">
-                <div class="chest-drawer__panel chest-drawer__panel--left"></div>
-                <div class="chest-drawer__panel chest-drawer__panel--right"></div>
-                <div class="chest-drawer__panel chest-drawer__panel--bottom"></div>
-                <div class="chest-drawer__panel chest-drawer__panel--back"><b>Inbox</b></div>
-            </div>
-        </div>
-        <div class="chest-drawer chest-drawer--bottom">
-            <details id="bottom">
-                <summary></summary>
-            </details>
-            <div class="chest-drawer__structure">
-                <div class="chest-drawer__panel chest-drawer__panel--left"></div>
-                <div class="chest-drawer__panel chest-drawer__panel--right"></div>
-                <div class="chest-drawer__panel chest-drawer__panel--bottom"></div>
-                <div class="chest-drawer__panel chest-drawer__panel--back"><b>Outbox</b></div>
-            </div>
-        </div>
-    </div>
-    <!-- Chest ends -->
 </body>
 
 </html>

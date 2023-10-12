@@ -142,6 +142,7 @@
                             if (value.value == colorName) {
                                 value.checked = true;
                                 document.getElementById("main").style.backgroundColor = "var(--" + colorName + ")";
+                                document.getElementById("home").classList.add(colorName);
                             }
                         });
                         document.getElementById("container").classList.remove("shrink");
@@ -159,6 +160,7 @@
             document.getElementById("bottom").classList.add("open");
             document.getElementById("hidden1").hidden = true;
             document.getElementById("hidden2").hidden = true;
+            document.getElementById("return").hidden = false;
             getPaper();
         }
     </script>
@@ -190,6 +192,9 @@
                 200个字以内，尽量不要超过5行</div>
             <div id="hidden2">
                 <a class="submit btn-gradient large yellow" id="submit" onclick="submit()"><b>提交</b></a>
+            </div>
+            <div id="return" hidden>
+                <a class="return btn-gradient large" href="index.html" id="home">返回主页</a>
             </div>
         </div>
     </div>

@@ -1,13 +1,13 @@
 //Not the production code.
 
-import { santinize } from "./security";
+import { sanitize } from "./security";
 
 function postQuestion(name,info,email) {
     const req=new XMLHttpRequest();
     const content=JSON.stringify({
-        "name":santinize(name),
-        "info":santinize(info),
-        "email":santinize(email),
+        "name":sanitize(name),
+        "info":sanitize(info),
+        "email":sanitize(email),
     });
     req.open("POST","/questions/new",true);
     req.setRequestHeader("content-type","application/json");
@@ -30,9 +30,9 @@ function postQuestion(name,info,email) {
 function postPaper(name,info,email,color){
     const req=new XMLHttpRequest();
     const content=JSON.stringify({
-        "name":santinize(name),
-        "info":santinize(info),
-        "email":santinize(email),
+        "name":sanitize(name),
+        "info":sanitize(info),
+        "email":sanitize(email),
         "color":color,
     });
     req.open("POST","/paper/post",true);

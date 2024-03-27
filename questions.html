@@ -11,13 +11,13 @@
     <link rel="stylesheet" type="text/css" href="assets/chest.css">
     <link rel="stylesheet" type="text/css" href="assets/questions.css">
     <script lang="javascript">
-        function santinize(str) { return str.trim().replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\"", "&quot;").replaceAll("\'", "&apos;").replaceAll("&", "&amp;").replaceAll("\\", "&#92;").replaceAll("\/", "&#47;"); }
+        function sanitize(str) { return str.trim().replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\"", "&quot;").replaceAll("\'", "&apos;").replaceAll("&", "&amp;").replaceAll("\\", "&#92;").replaceAll("\/", "&#47;"); }
         function postQuestion(name, info, email) {
             const req = new XMLHttpRequest();
             const content = JSON.stringify({
-                "name": santinize(name),
-                "info": santinize(info),
-                "email": santinize(email),
+                "name": sanitize(name),
+                "info": sanitize(info),
+                "email": sanitize(email),
             });
             req.open("POST", "http://182.92.67.83:10719/questions/new", true);
             req.setRequestHeader("content-type", "application/json");

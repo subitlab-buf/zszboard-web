@@ -12,10 +12,10 @@ function postQuestion(name,info,email) {
     req.open("POST","/questions/new",true);
     req.setRequestHeader("content-type","application/json");
     req.onreadystatechange(function(){
-        if(req.readyState==4){
-            if(req.status==200){
+        if(req.readyState===4){
+            if(req.status===200){
                 const res=JSON.parse(req.responseText);
-                if(res.code==10000){
+                if(res.code===10000){
                     //Display animation
                 }else{
                     //Display retry button
@@ -38,10 +38,10 @@ function postPaper(name,info,email,color){
     req.open("POST","/paper/post",true);
     req.setRequestHeader("content-type","application/json");
     req.onreadystatechange(function(){
-        if(req.readyState==4){
-            if(req.status==200){
+        if(req.readyState===4){
+            if(req.status===200){
                 const res=JSON.parse(req.responseText);
-                if(res.code==10000){
+                if(res.code===10000){
                     //Display animation
                 }else{
                     //Display retry button
@@ -57,8 +57,8 @@ function getPaper(){
     const req=new XMLHttpRequest();
     req.open("GET","/paper/get",true);
     req.onreadystatechange(function(){
-        if(req.readyState==4){
-            if(req.status==200){
+        if(req.readyState===4){
+            if(req.status===200){
                 const res=JSON.parse(req.responseText);
                 //Process paper
             }else{

@@ -22,10 +22,10 @@
             req.open("POST", "http://182.92.67.83:10719/questions/new", true);
             req.setRequestHeader("content-type", "application/json");
             req.onreadystatechange = function () {
-                if (req.readyState == 4) {
-                    if (req.status == 200) {
+                if (req.readyState === 4) {
+                    if (req.status === 200) {
                         const res = JSON.parse(req.responseText);
-                        if (res.code == 10000) {
+                        if (res.code === 10000) {
                             //Display animation
                             document.getElementById('container').classList.add('shrink');
                             setTimeout(function () {
@@ -45,7 +45,7 @@
             const info = document.getElementById("info");
             const name = document.getElementById("name");
             const email = document.getElementById("email");
-            if (name.innerText == "20个字以内" || info.innerText == "200个字以内，尽量不要超过5行") {
+            if (name.innerText === "20个字以内" || info.innerText === "200个字以内，尽量不要超过5行") {
                 return;
             }
             document.getElementById("top").classList.add("open");
@@ -105,22 +105,22 @@
             <br>
             <b>昵称*：</b>
             <div contenteditable="true" style="display: inline;" id="name"
-                onkeydown="if(event.keyCode==13)return false;"
-                onclick="if(event.currentTarget.innerText=='20个字以内')event.currentTarget.innerText=''"
-                onblur="if(event.currentTarget.innerText.length==0)event.currentTarget.innerText='20个字以内'">20个字以内</div>
+                onkeydown="if(event.keyCode===13)return false;"
+                onclick="if(event.currentTarget.innerText==='20个字以内')event.currentTarget.innerText=''"
+                onblur="if(event.currentTarget.innerText.length===0)event.currentTarget.innerText='20个字以内'">20个字以内</div>
             <br>
             <b>E-mail：</b>
             <div contenteditable="true" style="display: inline;" id="email"
-                onkeydown="if(event.keyCode==13)return false;"
-                onclick="if(event.currentTarget.innerText=='请使用有效的E-mail格式')event.currentTarget.innerText=''"
-                onblur="if(event.currentTarget.innerText.length==0)event.currentTarget.innerText='请使用有效的E-mail格式'">
+                onkeydown="if(event.keyCode===13)return false;"
+                onclick="if(event.currentTarget.innerText==='请使用有效的E-mail格式')event.currentTarget.innerText=''"
+                onblur="if(event.currentTarget.innerText.length===0)event.currentTarget.innerText='请使用有效的E-mail格式'">
                 请使用有效的E-mail格式</div>
             <br>
             <b>正文*：</b>
             <br>
             <div contenteditable="true" style="display: inline;" id="info"
-                onblur="if(event.currentTarget.innerText.length==0)event.currentTarget.innerText='200个字以内，尽量不要超过5行'"
-                onclick="if(event.currentTarget.innerText=='200个字以内，尽量不要超过5行')event.currentTarget.innerText=''">
+                onblur="if(event.currentTarget.innerText.length===0)event.currentTarget.innerText='200个字以内，尽量不要超过5行'"
+                onclick="if(event.currentTarget.innerText==='200个字以内，尽量不要超过5行')event.currentTarget.innerText=''">
                 200个字以内，尽量不要超过5行</div>
             <a class="submit btn-gradient large yellow" id="submit" onclick="submit()"><b>提交</b></a>
         </div>

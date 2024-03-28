@@ -3,7 +3,7 @@
 
 <head>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <title>2023魔法节小纸条</title>
+    <title>2024开放日小纸条</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="assets/common.css">
     <link rel="stylesheet" type="text/css" href="assets/sticky.css">
@@ -20,21 +20,17 @@
                 "email": sanitize(email),
                 "color": color,
             });
-            req.open("POST", "http://182.92.67.83:10719/paper/post", true);
+            req.open("POST", "http://182.92.67.83:1145/paper/post", true);
             req.setRequestHeader("content-type", "application/json");
             req.onreadystatechange = function () {
                 if (req.readyState === 4) {
                     if (req.status === 200) {
                         const res = JSON.parse(req.responseText);
-                        if (res.code === 10000) {
-                            //Display animation
-                            document.getElementById('container').classList.add('shrink');
-                            setTimeout(function () {
-                                document.getElementById("middle").classList.remove("open");
-                            }, 1000);
-                        } else {
-                            //Display retry button
-                        }
+                        //Display animation
+                        document.getElementById('container').classList.add('shrink');
+                        setTimeout(function () {
+                            document.getElementById("middle").classList.remove("open");
+                        }, 1000);
                     } else {
                         //Display retry button
                     }
@@ -109,7 +105,7 @@
         }
         function getPaper() {
             const req = new XMLHttpRequest();
-            req.open("GET", "http://182.92.67.83:10719/paper/get", true);
+            req.open("GET", "http://182.92.67.83:1145/paper/get", true);
             req.onreadystatechange = function () {
                 if (req.readyState === 4) {
                     if (req.status === 200) {
